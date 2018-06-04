@@ -1,0 +1,20 @@
+html body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.article--item{
+  display: inline-block;
+  width: 40%;
+  position: relative;
+}
+.article--item-title{
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+.article--item-img{
+  width: 100%;
+}
