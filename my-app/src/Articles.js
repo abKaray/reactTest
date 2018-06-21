@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const Articles = (props) => {
     return (
@@ -20,3 +21,6 @@ const Articles = (props) => {
 };
 
 export default Articles;
+Articles.propTypes = {
+    currentArticlePage: PropTypes.array
+};

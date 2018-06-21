@@ -5,7 +5,6 @@ import axios from 'axios';
 import LeftSide from './LeftSide';
 import PageNumber from './PageNumber';
 import Articles from './Articles';
-import Paa from './Test';
 import registerServiceWorker from './registerServiceWorker';
 
 class App extends React.Component {
@@ -69,9 +68,7 @@ class App extends React.Component {
 
         return (
             <div className='wrapper'>
-                <div className="left-side">
-                    <LeftSide changeEvent={this.onChangeName} filterFunc={this.searchFilter}/>
-                </div>
+                <LeftSide changeEvent={this.onChangeName} filterFunc={this.searchFilter}/>
                 <div className="right-side">
                     <Articles currentArticlePage={currentArticlePage} buttonClick={this.getComponent}/>
                     <PageNumber pageCurrent={currentPage} pageNumb={pageNumber}  clickEvent={this.handleClick} />
@@ -83,3 +80,4 @@ class App extends React.Component {
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+

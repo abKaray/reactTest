@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const PageNumber = (props) => {
     return(
@@ -15,3 +16,7 @@ const PageNumber = (props) => {
 };
 
 export default PageNumber;
+
+PageNumber.propTypes = {
+    pageNumb: PropTypes.array
+};

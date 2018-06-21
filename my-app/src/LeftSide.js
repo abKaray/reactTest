@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class LeftSide extends Component{
 
@@ -11,7 +12,7 @@ class LeftSide extends Component{
     render(){
         const {changeEvent, filterFunc} = this.props;
         return(
-            <div>
+            <div className="left-side">
                 <input type="text" className='input-wrapper' placeholder='Search' onChange={filterFunc}/>
                 <select name='category' className='select-wrapper' onChange={changeEvent}>
                     {LeftSide.defaultProps.category.map( (elem, indx) =>
@@ -32,3 +33,11 @@ class LeftSide extends Component{
 }
 
 export default LeftSide;
+
+LeftSide.propTypes = {
+    category: PropTypes.array,
+    language: PropTypes.array,
+    country: PropTypes.array,
+    changeEvent: PropTypes.func,
+    filterFunc: PropTypes.func
+};
